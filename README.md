@@ -22,6 +22,7 @@ Possible further improvements/changes include:
 
 - Addition of curvy gridlines for constant values of x. This may even eliminate the need of using color encoding for bar chart.
 - Extending this idea for monotonically decreasing data.
+- Removing the white lines that are created due to stacking too many quads/bar togather in one place.
 
 ## Example
 
