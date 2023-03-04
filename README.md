@@ -2,9 +2,20 @@
 
 Line chart is often used for visualizing data. But if the data varies monotonically, it may be replaced by a bar chart.
 
-The height of this bar chart directly represents the final value of the variable (y) whereas the color encoded body of the bar chart describes what ranges of x contributes to the change in the variable(y). By using this type of encoding:
+For the convinience of explanation, let us consider that the data is monotonically varying along time (t).
 
-- We eliminate the visual clutering of the line chart. This is the main aim of this chart.
+Design Details:
+
+- The height of this bar chart directly represents the **final** value of the variable (y)
+- For each "stack" of bar chart:
+  - Start height (bottom) from x-axis denotes the value of variable y at t1
+  - End height (top) from x-axis denotes the value of variable y at t2 (t2 > t1)
+  - Color encoding represents the average of start and end time (t1+t2)/2
+
+By using this type of encoding:
+
+- **We eliminate the visual clutering of the line chart. This is the main aim of this chart.**
+- We can still see the time ranges that caused the growth of variable (y).
 - We focus more on the final value of variable (y) and less on the intermediate values. (This may be a good or a bad thing depending on the need of user)
 
 Possible further improvements/changes include:
